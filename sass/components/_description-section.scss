@@ -1,0 +1,38 @@
+.description-list {
+    display: flex;
+}
+
+.description-list__item {
+    width: 270px;
+    display: inline-block;
+    border-radius: 4px;
+
+    margin-right: 30px; 
+}
+
+.description-list__item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.description-list__block {
+    background: #F5F4FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.description-list__title {
+    margin-top: 30px;
+    line-height: var(--line-height);
+    text-transform: uppercase;
+    color: var(--color-b);
+    font-size: var(--font-s);
+}
+
+.description-list__text {
+    line-height: 1.714;
+    color: var(--color-grey);
+
+    margin-top: 10px;
+}
