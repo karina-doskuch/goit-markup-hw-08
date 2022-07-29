@@ -1,5 +1,10 @@
 .section-doing {
+    display: none;
     padding-top: 0;
+
+    @media (min-width: 1200px) {
+        display: block;
+    }
 }
 
 .section-doing__heading {
@@ -18,8 +23,6 @@
     display: flex;
     margin-top: 50px;
 }
-
-
 .section-doing__item {
     position: relative;
     margin-right: 30px;

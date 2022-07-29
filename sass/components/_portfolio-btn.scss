@@ -3,16 +3,21 @@
 } 
 
 .portfolio-nav {
-    display: flex;
-    justify-content: center;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+  
 }
 
 .portfolio-nav .portfolio-nav__list:not(:last-child) {
-    margin-right: 8px;
+        margin-right: 8px;  
 }
 
 .portfolio-nav__list {
     display: inline-block;
+    margin-bottom: 15px;
 }
 
 .portfolio-nav__btn {

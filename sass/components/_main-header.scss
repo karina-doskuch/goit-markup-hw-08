@@ -1,9 +1,6 @@
 .section-container {
-    max-width: 1600px;
-    min-height: 480px;
     margin-left: auto;
     margin-right: auto;
-
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -13,21 +10,68 @@
     background-color: var(--bg-color);
     background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
         rgba(47, 48, 58, 0.4)), 
-        url(../images/Imgheader.jpg);  
+        url('../../images/headerImages/mobile-x1.jpg');
+        
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)), 
+        url('../../images/headerImages/mobile-retina.jpg');
+    }
+}
+
+
+@media(min-width: 480px) and (max-width: 767px) {
+    .section-container {
+        max-width: 768px;
+        background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)),  url('../../images/headerImages/laptop-x1.png');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .section-container {
+            max-width: 1600px;
+            background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
+            rgba(47, 48, 58, 0.4)), url('../../images/headerImages/laptop-retina.png');
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .section-container {
+        background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)),  url('../../images/headerImages/desktop-x1.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .section-container {
+            background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
+            rgba(47, 48, 58, 0.4)), url('../../images/headerImages/desktop-retina.jpg');
+        }
+    }
 }
 
 .section-container__title {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-    font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--color-white);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 900;
+     max-width: 360px;
+
+    @media (min-width: 768px) {
+        max-width: 700px;
+        font-size: 44px; 
+    }   
 }
 
 .section-container__btn {

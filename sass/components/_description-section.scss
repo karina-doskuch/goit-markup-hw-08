@@ -1,13 +1,24 @@
 .description-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .description-list__item {
     width: 270px;
     display: inline-block;
+    flex-basis: 100%;
     border-radius: 4px;
 
-    margin-right: 30px; 
+    // margin-right: 30px;
+    
+    @media (min-width: 768px) {
+        flex-basis: calc(100% / 2 - 15px);
+    }
+
+    @media (min-width: 1200px) {
+        flex-basis: auto;
+    }
 }
 
 .description-list__item:nth-child(4n) {
@@ -28,6 +39,11 @@
     text-transform: uppercase;
     color: var(--color-b);
     font-size: var(--font-s);
+    text-align: center;
+
+    @media (min-width: 768px) {
+        text-align: left;
+    }
 }
 
 .description-list__text {
