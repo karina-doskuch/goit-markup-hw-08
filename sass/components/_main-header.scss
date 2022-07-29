@@ -10,14 +10,14 @@
     background-color: var(--bg-color);
     background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
         rgba(47, 48, 58, 0.4)), 
-        url('../../images/headerImages/mobile-x1.jpg');
+        url('../images/headerImages/mobile-x1.jpg');
         
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
         rgba(47, 48, 58, 0.4)), 
-        url('../../images/headerImages/mobile-retina.jpg');
+        url('../images/headerImages/mobile-retina.jpg');
     }
 }
 
@@ -26,7 +26,7 @@
     .section-container {
         max-width: 768px;
         background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
-        rgba(47, 48, 58, 0.4)),  url('../../images/headerImages/laptop-x1.png');
+        rgba(47, 48, 58, 0.4)),  url('../images/headerImages/laptop-x1.png');
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -35,7 +35,7 @@
         .section-container {
             max-width: 1600px;
             background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
-            rgba(47, 48, 58, 0.4)), url('../../images/headerImages/laptop-retina.png');
+            rgba(47, 48, 58, 0.4)), url('../images/headerImages/laptop-retina.png');
         }
     }
 }
@@ -43,7 +43,7 @@
 @media(min-width: 768px) {
     .section-container {
         background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
-        rgba(47, 48, 58, 0.4)),  url('../../images/headerImages/desktop-x1.jpg');
+        rgba(47, 48, 58, 0.4)),  url('../images/headerImages/desktop-x1.jpg');
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -51,7 +51,7 @@
     (min-resolution: 2dppx) {
         .section-container {
             background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
-            rgba(47, 48, 58, 0.4)), url('../../images/headerImages/desktop-retina.jpg');
+            rgba(47, 48, 58, 0.4)), url('../images/headerImages/desktop-retina.jpg');
         }
     }
 }
