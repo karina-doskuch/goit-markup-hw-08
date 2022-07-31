@@ -1,6 +1,5 @@
 .header-container {
     border-bottom: 1px solid #ECECEC; 
-    // position: relative;
 }
 
 .header-container .container {
@@ -33,16 +32,7 @@
 
 .header-container__nav {
     display: flex;
-    align-items: center;
-
-
-    // @media (min-width: 480px) {
-    //     padding-top: 16px;
-    //     padding-bottom: 16px;
-    
-    //     justify-content: space-between;
-    // }
-   
+    align-items: center;   
 }
 
 .header-container__logo {
@@ -73,20 +63,6 @@
     letter-spacing: 0.02em;
     color: var(--color-b);
     margin-right: 50px;
-
-    // @media (min-width: 480px) {
-    //     .header-nav__item:not(:last-child) {
-    //         margin-bottom: 32px;
-    //     }
-    // }
-
-    // @media (min-width: 768px) {
-    //     position: relative;
-
-    //     .header-nav__item:not(:last-child) {
-    //         margin-right: 50px;
-    //     }
-    // }
 }
 
 .link:hover {
@@ -138,18 +114,26 @@
 }
 
 .auth-nav {
+    display: none;
+    @media (min-width: 768px) {
+       display: block;
+        margin-left: auto;
+    }
+
     @media (min-width: 1200px) {
         display: flex;
         margin-left: auto;
+        gap: 10px;
     }
 }
 
 .auth-nav__item {
-    margin-left: 30px;
+    margin-top: 10px;
+    margin-left: 0;
 
-    @media (max-width: 1200px) {
-        margin-top: 10px;
-        margin-left: 0;
+    @media (min-width: 1200px) {
+        margin-left: 30px;
+        margin-top: 0;
     }
 }
 

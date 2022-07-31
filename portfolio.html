@@ -17,39 +17,93 @@
 
 <body>
     <header class="header-container">
-        <div class="container header-container__nav">
+        <div class="container header-container__flex">
             <nav class="header-container__nav">
                 <a class="header-container__logo" href="#"><span class="header-container__accent">Web</span>Studio</a>
                 <ul class="header-nav">
-                    <li class="header-nav__item">
-                        <a class="link header-nav__link" href="index.html">Студия</a>
-                    </li>
-                    <li class="header-nav__item">
-                        <a class="header-nav__link current current-tab" href="portfolio.html"><span
-                                class="link">Портфолио</span></a>
-                    </li>
-                    <li class="item header-nav__item">
-                        <a class="link header-nav__link" href="#">Контакты</a>
-                    </li>
+                    <div class="header-container__desktop">
+                        <li class="header-nav__item">
+                            <a class="link header-nav__link" href="index.html">Студия</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__link current current-tab" href="portfolio.html"><span
+                                    class="link">Портфолио</span></a>
+                        </li>
+                        <li class="item header-nav__item">
+                            <a class="link header-nav__link" href="#">Контакты</a>
+                        </li>
                 </ul>
             </nav>
 
             <ul class="auth-nav">
-                <li class="header-nav__item auth-nav__item">
+                <li class="auth-nav__item">
                     <a class="auth-nav__link" href="mailto:info@devstudio.com">
                         <svg class="icon-email" width="16" height="12">
                             <use href="images/svg-sprite.svg#icon-mail"></use>
                         </svg>
                         info@devstudio.com</a>
                 </li>
-                <li class="header-nav__item auth-nav__item">
+                <li class="auth-nav__item">
                     <a class="auth-nav__link" href="tel:+380961111111">
                         <svg class="icon-tel" width="10" height="16">
                             <use href="images/svg-sprite.svg#icon-tel"></use>
                         </svg>
-                        +38 096 111 11 11</a>
+                        +38 096 111 11 11
+                    </a>
                 </li>
             </ul>
+        </div>
+
+        <button class="header-container__mobile-btn" data-mobile-menu-open>
+            <svg class="header__icon-burger" width="24" height="16" aria-label="Кнопка навигации меню">
+                <use href="./images/svg-sprite.svg#icon-menu_24px"></use>
+            </svg>
+        </button>
+
+        <div class="mobile-menu is-hidden" data-mobile-menu>
+            <nav class="header__mobile-menu mobile-menu">
+                <ul class="mobile-menu__list">
+                    <li>
+                        <a class="link mobile-menu__link" href="index.html">Студия</a>
+                    </li>
+                    <li>
+                        <a class="link mobile-menu__link" href="portfolio.html"><span class="link">Портфолио</span></a>
+                    </li>
+                    <li>
+                        <a class="link mobile-menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="mobile-menu__contacts">
+                    <li>
+                        <a class="mobile-menu__tel" href="#">+38 096 111 11 11</a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu__email" href="#">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-menu__social-list">
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">Instagram</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">Twitter</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">Facebook</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">LinkedIn</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="header-container__mobile-btn" data-mobile-menu-close>
+                <svg class="header__icon-burger" width="19" height="19" aria-label="Кнопка навигации меню">
+                    <use href="./images/svg-sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+
+        </div>
         </div>
     </header>
 
@@ -58,12 +112,17 @@
             <div class="container">
                 <h1 class="visually-hidden">Меню навигации</h1>
                 <ul class="nav portfolio-nav">
-                    <li class="portfolio-nav__list"><button class="wrapper portfolio-nav__btn" type="button">Все</button>
+                    <li class="portfolio-nav__list"><button class="wrapper portfolio-nav__btn"
+                            type="button">Все</button>
                     </li>
-                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Веб-сайты</button></li>
-                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Приложения</button></li>
-                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Дизайн</button></li>
-                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Маркетинг</button></li>
+                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Веб-сайты</button>
+                    </li>
+                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Приложения</button>
+                    </li>
+                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Дизайн</button>
+                    </li>
+                    <li class="portfolio-nav__list"><button class="portfolio-nav__btn" type="button">Маркетинг</button>
+                    </li>
                 </ul>
             </div>
 
@@ -79,7 +138,18 @@
                                         частном
                                         лице</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(9).jpg" alt="photo9" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/website-mobile(x1).jpg 1x,
+                                    images/portfolio-images/website-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/website-laptop(x1).jpg 1x,
+                                        images/portfolio-images/website-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/website-desktop(x1).jpg 1x,
+                                        images/portfolio-images/website-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(9).jpg" alt="photo9">
+                                </picture>
                             </div>
                             <div class="portfolio-content">
                                 <h2 class="portfolio-content__title">Технокряк</h2>
@@ -98,7 +168,18 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(10).jpg" alt="photo10" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/design-mobile(x1).jpg 1x,
+                                    images/portfolio-images/design-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/design-laptop(x1).jpg 1x,
+                                        images/portfolio-images/design-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/design-desktop(x1).jpg 1x,
+                                        images/portfolio-images/design-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(10).jpg" alt="photo10">
+                                </picture>
                             </div>
                             <div class="portfolio-content">
                                 <h2 class="portfolio-content__title">Постер New Orlean vs Golden Star</h2>
@@ -117,7 +198,18 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(11).jpg" alt="photo11" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/application-mobile(x1).jpg 1x,
+                                    images/portfolio-images/application-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/application-laptop(x1).jpg 1x,
+                                        images/portfolio-images/application-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/application-desktop(x1).jpg 1x,
+                                        images/portfolio-images/application-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(11).jpg" alt="photo11">
+                                </picture>
                             </div>
                             <div class="portfolio-content">
                                 <h2 class="portfolio-content__title">Ресторан Seafood</h2>
@@ -137,7 +229,18 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(12).jpg" alt="photo12" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/marketing-mobile(x1).jpg 1x,
+                                    images/portfolio-images/marketing-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/marketing-laptop(x1).jpg 1x,
+                                        images/portfolio-images/marketing-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/marketing-desktop(x1).jpg 1x,
+                                        images/portfolio-images/marketing-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(12).jpg" alt="photo12">
+                                </picture>
                             </div>
 
                             <div class="portfolio-content">
@@ -157,7 +260,18 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(13).jpg" alt="photo13" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/boxes-mobile(x1).jpg 1x,
+                                    images/portfolio-images/boxes-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/boxes-laptop(x1).jpg 1x,
+                                        images/portfolio-images/boxes-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/boxes-desktop(x1).jpg 1x,
+                                        images/portfolio-images/boxes-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(13).jpg" alt="photo13">
+                                </picture>
                             </div>
 
                             <div class="portfolio-content">
@@ -177,13 +291,23 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(14).jpg" alt="photo14" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/borders-mobile(x1).jpg 1x,
+                                    images/portfolio-images/borders-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/borders-laptop(x1).jpg 1x,
+                                        images/portfolio-images/borders-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/borders-desktop(x1).jpg 1x,
+                                        images/portfolio-images/borders-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(14).jpg" alt="photo14">
+                                </picture>
                             </div>
                             <div class="portfolio-content">
                                 <h2 class="portfolio-content__title">Inspiration has no Borders</h2>
                                 <p class="portfolio-content__text">Веб-сайт</p>
                             </div>
-
                         </a>
                     </li>
 
@@ -197,7 +321,18 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(15).jpg" alt="photo15" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/edition-mobile(x1).jpg 1x,
+                                    images/portfolio-images/edition-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/edition-laptop(x1).jpg 1x,
+                                        images/portfolio-images/edition-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/edition-desktop(x1).jpg 1x,
+                                        images/portfolio-images/edition-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(15).jpg" alt="photo15">
+                                </picture>
                             </div>
                             <div class="portfolio-content">
                                 <h2 class="portfolio-content__title">Издание Limited Edition</h2>
@@ -216,13 +351,23 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(16).jpg" alt="photo16" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/lab-mobile(x1).jpg 1x,
+                                    images/portfolio-images/lab-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/lab-laptop(x1).jpg 1x,
+                                        images/portfolio-images/lab-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/lab-desktop(x1).jpg 1x,
+                                        images/portfolio-images/lab-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(16).jpg" alt="photo16">
+                                </picture>
                             </div>
                             <div class="portfolio-content">
                                 <h2 class="portfolio-content__title">Проект LAB</h2>
                                 <p class="portfolio-content__text">Маркетинг</p>
                             </div>
-
                         </a>
                     </li>
 
@@ -236,7 +381,18 @@
                                         частном
                                         лице.</p>
                                 </div>
-                                <img class="portfolio-container__img" src="images/img(17).jpg" alt="photo17" width="370">
+                                <picture>
+                                    <source srcset="images/portfolio-images/growing-mobile(x1).jpg 1x,
+                                    images/portfolio-images/growing-retina-mobile(x2).jpg 2x">
+
+                                    <source srcset="images/portfolio-images/growing-laptop(x1).jpg 1x,
+                                        images/portfolio-images/growing-laptop(x2).jpg 2x
+                                      " media="(min-width: 768px)">
+                                    <source srcset="images/portfolio-images/growing-desktop(x1).jpg 1x,
+                                        images/portfolio-images/growing-desktop(x2).jpg 2x
+                                      " media="(min-width: 1200px)">
+                                    <img class="portfolio-container__img" src="images/img(17).jpg" alt="photo17">
+                                </picture>
                             </div>
                             <div class="portfolio-content">
                                 <h2 class="portfolio-content__title">Growing Business</h2>
@@ -329,6 +485,7 @@
 
         </div>
     </footer>
+    <script src="./js/mobile.js"></script>
 </body>
 
 </html>

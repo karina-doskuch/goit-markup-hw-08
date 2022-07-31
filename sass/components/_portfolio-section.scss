@@ -1,19 +1,26 @@
 .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
+
+    @media(min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 30px;
+    }
 }
 
 .portfolio-container__item {
     background: var(--color-white);
-    width: 370px;
-    flex-basis: 100%;
+    max-width: 450px; 
     margin-bottom: 30px;
-   
-    // margin-right: 30px;
 
-    @media (min-width: 768px) {
-        flex-basis: calc(50% / 2 - 15px);
+    @media(min-width: 768px) {
+        max-width: 354px;
     }
+    
+    @media(min-width: 1200px) {
+        width: 370px;
+    }
+
 }
 
 .portfolio-container__item:nth-child(3n) {
@@ -27,6 +34,9 @@
 .portfolio-container__link {
     display: block;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .portfolio-container__link:hover {
@@ -43,7 +53,7 @@
 
 .overlay {
     position: absolute;
-    width: 370px;
+    width: 450px;
     height: 294px;
     background: rgba(33, 150, 243, 0.9);
 
@@ -52,6 +62,14 @@
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    @media(min-width: 768px) {
+        max-width: 354px;
+    }
+    
+    @media(min-width: 1200px) {
+        width: 370px;
+    }
 }
 
 .portfolio-container__item:hover .overlay {
@@ -66,10 +84,18 @@
     line-height: 28px;
     letter-spacing: 0.03em;
     color: var(--color-white);
-    width: 370px;
+    width: 450px;
     height: 168px;
     text-align: center;
     padding: 64px 24px;
+
+    @media(min-width: 768px) {
+        max-width: 354px;
+    }
+    
+    @media(min-width: 1200px) {
+        width: 370px;
+    }
 }
 
 .portfolio-content {
@@ -78,6 +104,7 @@
     border-bottom: 1px solid #EEEEEE;
     background: var(--color-white);
     padding: 20px 24px;
+    flex-grow: 1;
 }
 
 .portfolio-content__title {
@@ -95,5 +122,11 @@
 
     margin-top: 4px;
     color: var(--color-grey);
+}
+
+.portfolio-container__img {
+    height: 294px;
+    object-fit: cover;
+    object-position: center;
 }
 

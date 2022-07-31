@@ -1,5 +1,9 @@
 .form-modal {
-    width: 448px;
+    width: 370px;
+
+    @media (min-width: 1200px) {
+        width: 448px;
+    }
 }
 
 .form-modal__field {
@@ -100,19 +104,25 @@ textarea::placeholder {
     opacity: 0;
 }
 
-.modal-option__text {
+
+.modal-option__text,
+.modal-option__link {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
+
+    @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.modal-option__text {
     color: var(--color-grey);
 }
 
 .modal-option__link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.03em;
     margin-left: 5px;
     color: var(--main-bg-color);
 }
