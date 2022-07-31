@@ -3,6 +3,12 @@
     // position: relative;
 }
 
+.header-container .container {
+    @media (max-width: 768px) {
+        min-width: 100%;
+    }
+}
+
 .header-container__flex {
     display: flex;
     align-items: center;
