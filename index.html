@@ -20,9 +20,9 @@
     <header class="header-container">
         <div class="container header-container__flex">
             <nav class="header-container__nav">
-            <a class="header-container__logo" href="#"><span class="header-container__accent">Web</span>Studio</a>
+                <a class="header-container__logo" href="#"><span class="header-container__accent">Web</span>Studio</a>
 
-            <div class="header-container__desktop">
+                <div class="header-container__desktop">
                     <ul class="header-nav">
                         <li class="header-nav__item">
                             <a class=" link header-nav__link current-tab" href="index.html"><span
@@ -35,79 +35,77 @@
                             <a class="link header-nav__link" href="#">Контакты</a>
                         </li>
                     </ul>
-                </nav>
+                </div>
+            </nav>
 
-                <ul class="auth-nav">
-                    <li class="auth-nav__item">
-                        <a class="auth-nav__link">
-                            <svg class="icon-email" width="16" height="12">
-                                <use href="images/svg-sprite.svg#icon-mail"></use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
+            <ul class="auth-nav">
+                <li class="auth-nav__item">
+                    <a class="auth-nav__link">
+                        <svg class="icon-email" width="16" height="12">
+                            <use href="images/svg-sprite.svg#icon-mail"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="auth-nav__item">
+                    <a class="auth-nav__link" href="tel:+380961111111">
+                        <svg class="icon-tel" width="10" height="16">
+                            <use href="images/svg-sprite.svg#icon-tel"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="header-container__mobile-btn" data-mobile-menu-open>
+            <svg class="header__icon-burger" width="24" height="16" aria-label="Кнопка навигации меню">
+                <use href="./images/svg-sprite.svg#icon-menu_24px"></use>
+            </svg>
+        </button>
+
+        <div class="mobile-menu is-hidden" data-mobile-menu>
+            <nav class="header__mobile-menu mobile-menu">
+                <ul class="mobile-menu__list">
+                    <li>
+                        <a class="link mobile-menu__link" href="index.html">Студия</a>
                     </li>
-                    <li class="auth-nav__item">
-                        <a class="auth-nav__link" href="tel:+380961111111">
-                            <svg class="icon-tel" width="10" height="16">
-                                <use href="images/svg-sprite.svg#icon-tel"></use>
-                            </svg>
-                            +38 096 111 11 11
-                        </a>
+                    <li>
+                        <a class="link mobile-menu__link" href="portfolio.html"><span class="link">Портфолио</span></a>
+                    </li>
+                    <li>
+                        <a class="link mobile-menu__link" href="#">Контакты</a>
                     </li>
                 </ul>
-            </div>
+                <ul class="mobile-menu__contacts">
+                    <li>
+                        <a class="mobile-menu__tel" href="#">+38 096 111 11 11</a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu__email" href="#">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-menu__social-list">
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">Instagram</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">Twitter</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">Facebook</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a href="#" class="mobile-menu__social-link">LinkedIn</a>
+                    </li>
+                </ul>
+            </nav>
 
-            <button class="header-container__mobile-btn" data-mobile-menu-open>
-                <svg class="header__icon-burger" width="24" height="16" aria-label="Кнопка навигации меню">
-                    <use href="./images/svg-sprite.svg#icon-menu_24px"></use>
+            <button class="header-container__mobile-btn" data-mobile-menu-close>
+                <svg class="header__icon-burger" width="19" height="19" aria-label="Кнопка навигации меню">
+                    <use href="./images/svg-sprite.svg#icon-close"></use>
                 </svg>
             </button>
-
-            <div class="mobile-menu is-hidden" data-mobile-menu>
-                <nav class="header__mobile-menu mobile-menu">
-                    <ul class="mobile-menu__list">
-                        <li>
-                            <a class="link mobile-menu__link" href="index.html">Студия</a>
-                        </li>
-                        <li>
-                            <a class="link mobile-menu__link" href="portfolio.html"><span
-                                    class="link">Портфолио</span></a>
-                        </li>
-                        <li>
-                            <a class="link mobile-menu__link" href="#">Контакты</a>
-                        </li>
-                    </ul>
-                    <ul class="mobile-menu__contacts">
-                        <li>
-                            <a class="mobile-menu__tel" href="#">+38 096 111 11 11</a>
-                        </li>
-                        <li>
-                            <a class="mobile-menu__email" href="#">info@devstudio.com</a>
-                        </li>
-                    </ul>
-                    <ul class="mobile-menu__social-list">
-                        <li class="mobile-menu__social-item">
-                            <a href="#" class="mobile-menu__social-link">Instagram</a>
-                        </li>
-                        <li class="mobile-menu__social-item">
-                            <a href="#" class="mobile-menu__social-link">Twitter</a>
-                        </li>
-                        <li class="mobile-menu__social-item">
-                            <a href="#" class="mobile-menu__social-link">Facebook</a>
-                        </li>
-                        <li class="mobile-menu__social-item">
-                            <a href="#" class="mobile-menu__social-link">LinkedIn</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <button class="header-container__mobile-btn" data-mobile-menu-close>
-                    <svg class="header__icon-burger" width="19" height="19" aria-label="Кнопка навигации меню">
-                        <use href="./images/svg-sprite.svg#icon-close"></use>
-                    </svg>
-                </button>
-
-            </div>
         </div>
     </header>
 
@@ -205,15 +203,15 @@
                         <picture>
                             <source srcset="images/our-team/demyanenko-mobile(x1).jpg 1x,
                             images/our-team/demyanenko-retina-mobile.jpg 2x" type="image/jpeg"
-                            media="(max-width: 767px)">
+                                media="(max-width: 767px)">
 
                             <source srcset="images/our-team/demyanenko-laptop(x1).jpg 1x,
-                            images/our-team/demyanenko-laptop(x2).jpg 2x" type="image/jpeg" 
-                            media="(min-width: 768px) and (max-width: 1199px)">
+                            images/our-team/demyanenko-laptop(x2).jpg 2x" type="image/jpeg"
+                                media="(min-width: 768px) and (max-width: 1199px)">
 
                             <source srcset="images/our-team/demyanenko-desktop(x1).jpg 1x,
                             images/our-team/demyanenko-desktop(x2).jpg 2x" type="image/jpeg"
-                            media="(min-width: 1200px)">
+                                media="(min-width: 1200px)">
                             <img class="team-list__img" src="images/img(5).jpg" alt="photo5">
                         </picture>
                         <h3 class="team-list__header">Игорь Демьяненко</h3>
@@ -257,16 +255,14 @@
                     <li class="team-list__item">
                         <picture>
                             <source srcset="images/our-team/repina-mobile(x1).jpg 1x,
-                            images/our-team/repina-retina-mobile.jpg 2x" type="image/jpeg"
-                            media="(max-width: 767px)">
+                            images/our-team/repina-retina-mobile.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
 
                             <source srcset="images/our-team/repina-laptop(x1).jpg 1x,
-                            images/our-team/repina-laptop(x2).jpg 2x" type="image/jpeg" 
-                            media="(min-width: 768px) and (max-width: 1199px)">
+                            images/our-team/repina-laptop(x2).jpg 2x" type="image/jpeg"
+                                media="(min-width: 768px) and (max-width: 1199px)">
 
                             <source srcset="images/our-team/repina-desktop(x1).jpg 1x,
-                            images/our-team/repina-desktop(x2).jpg 2x" type="image/jpeg" 
-                            media="(min-width: 1200px)">
+                            images/our-team/repina-desktop(x2).jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
                             <img class="team-list__img" src="images/img(6).jpg" alt="photo6">
                         </picture>
                         <h3 class="team-list__header">Ольга Репина</h3>
@@ -311,16 +307,14 @@
                     <li class="team-list__item">
                         <picture>
                             <source srcset="images/our-team/tarasov-mobile(x1).jpg 1x,
-                            images/our-team/tarasov-retina-mobile.jpg 2x" type="image/jpeg"
-                            media="(max-width: 767px)">
+                            images/our-team/tarasov-retina-mobile.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
 
                             <source srcset="images/our-team/tarasov-laptop(x1).jpg 1x,
-                            images/our-team/tarasov-laptop(x2).jpg 2x" type="image/jpeg" 
-                            media="(min-width: 768px) and (max-width: 1199px)">
+                            images/our-team/tarasov-laptop(x2).jpg 2x" type="image/jpeg"
+                                media="(min-width: 768px) and (max-width: 1199px)">
 
                             <source srcset="images/our-team/tarasov-desktop(x1).jpg 1x,
-                            images/our-team/tarasov-desktop(x2).jpg 2x" type="image/jpeg" 
-                            media="(min-width: 1200px)">
+                            images/our-team/tarasov-desktop(x2).jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
                             <img class="team-list__img" src="images/img(7).jpg" alt="photo7">
                         </picture>
                         <h3 class="team-list__header">Николай Тарасов</h3>
@@ -365,12 +359,11 @@
                     <li class="team-list__item">
                         <picture>
                             <source srcset="images/our-team/ermakov-mobile(x1).jpg 1x,
-                            images/our-team/ermakov-retina-mobile.jpg 2x" type="image/jpeg"
-                            media="(max-width: 767px)">
+                            images/our-team/ermakov-retina-mobile.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
 
                             <source srcset="images/our-team/ermakov-laptop(x1).jpg 1x,
-                            images/our-team/ermakov-laptop(x2).jpg 2x" type="image/jpeg" 
-                            media="(min-width: 768px) and (max-width: 1199px)">
+                            images/our-team/ermakov-laptop(x2).jpg 2x" type="image/jpeg"
+                                media="(min-width: 768px) and (max-width: 1199px)">
 
                             <source srcset="images/our-team/ermakov-desktop(x1).jpg 1x,
                             images/our-team/ermakov-desktop(x2).jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
