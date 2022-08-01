@@ -2,8 +2,6 @@
     margin-left: auto;
     height: 400px;
     margin-right: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
     text-align: center;
     background-position: center;
     background-size: cover;
@@ -23,25 +21,23 @@
 }
 
 
-@media(min-width: 480px) and (max-width: 767px) {
+@media(min-width: 768px) {
     .section-container {
-        max-width: 768px;
         background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
-        rgba(47, 48, 58, 0.4)),  url('../images/headerImages/laptop-x1.png');
+        rgba(47, 48, 58, 0.4)),  url('../images/headerImages/laptop-x1.jpg');
     }
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .section-container {
-            max-width: 1600px;
             background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
-            rgba(47, 48, 58, 0.4)), url('../images/headerImages/laptop-retina.png');
+            rgba(47, 48, 58, 0.4)), url('../images/headerImages/laptop-retina.jpg');
         }
     }
 }
 
-@media(min-width: 768px) {
+@media(min-width: 1200px) {
     .section-container {
         height: 600px;
         background-image: linear-gradient(to right,  rgba(47, 48, 58, 0.4), 
@@ -68,12 +64,18 @@
     margin-right: auto;
     text-align: center;
     font-weight: 900;
-     max-width: 360px;
+    max-width: 360px;
+    padding-top: 118px;
 
     @media (min-width: 768px) {
-        max-width: 700px;
-        font-size: 44px; 
-    }   
+        font-size: 26px;
+        line-height: 42px;
+        max-width: 360px;
+    }  
+    
+    @media (min-width: 1200px) {
+        padding-top: 200px;
+    }
 }
 
 .section-container__btn {
@@ -82,11 +84,16 @@
     border-radius: 4px;
     border: none;
     margin-top: 30px;
+    margin-bottom: 118px;
     cursor: pointer;
     width: 200px;
     height: 50px;
     left: 700px;
     top: 430px;
+
+    @media (min-width) {
+        margin-bottom: 200px;
+    }
 }
 
 .section-container__text {

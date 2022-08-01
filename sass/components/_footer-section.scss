@@ -3,6 +3,10 @@
     background: var(--bg-color);
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media (min-width: 1200px) {
+        padding-top: 0;
+    }
 }
 
 

@@ -65,12 +65,16 @@
 .team-icons {
     display: flex;
     justify-content: center;
-    padding-bottom: 24px;
     margin-bottom: 30px;
  }
 
 .team-icons__item {
     margin-right: 10px;
+    padding-bottom: 24px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 0;
+    }
 }
 
 .team-icons__item:nth-child(4) {
