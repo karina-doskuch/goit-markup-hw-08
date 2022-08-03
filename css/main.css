@@ -335,6 +335,9 @@ img {
 @media (min-width: 1200px) {
   .section-container__title {
     padding-top: 200px;
+    font-size: 44px;
+    line-height: 60px;
+    max-width: 700px;
   }
 }
 
@@ -630,7 +633,7 @@ img {
 }
 @media (min-width: 1200px) {
   .overlay {
-    width: 370px;
+    max-width: 370px;
   }
 }
 
